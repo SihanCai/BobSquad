@@ -1,0 +1,103 @@
+
+
+.uploadHeaderParent {
+    padding: 30px;
+    text-align: left;
+    background: white;
+    width: 50%;
+}
+
+
+.uploadHeaderChild {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.uploadGridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color:grey;
+    width: 50%;
+}
+
+.uploadGridItem {
+    background-color: grey;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+  
+  
+
+
+
+
+.manageHeaderParent {
+    padding: 30px;
+    text-align: left;
+    background: white;
+}
+
+.manageHeaderChild {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.manageUploadedVideos {
+    background-color: grey;
+    width:70%;
+    border-radius: 5px 5px 5px;
+}
+
+.manageUploadedVideosChild {
+    padding-left: 40px;
+    display:inline-block; 
+}
+
+.manageUploadedVideosChild .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.manageUploadedVideosChild .searchTerm {
+    width: 100%;
+    border: 2px solid black;
+    border-right: none;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px 5px 5px;
+}
+.manageUploadedVideosChild .searchButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#menu-outer {
+	height: 84px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	list-style: none;
+	padding-top: 20px;
+}
+ul#horizontal-list li {
+	padding-right: 90px;
+	display: inline-block;
+}
+
+
+
+
+

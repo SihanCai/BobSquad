@@ -1,0 +1,26 @@
+#map {
+    position: fixed !important;
+    height: 600px;
+    width: 100% !important;
+}
+
+.font-xx-large {
+    font-size: xx-large;
+}
+
+.sport-color {
+    color: #4744E9;
+}
+
+.culture-color {
+    color: black;
+}
+
+.attractions-color {
+    color: #F91515;
+}
+
+.big-checkbox {
+    width: 30px;
+    height: 30px;
+}

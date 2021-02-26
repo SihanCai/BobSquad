@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+
+        <div class="card-body">
+          <h4 class="title text-center mt-4">
+            Sign up
+          </h4>
+          <div class="form-box px-3">
+            <div class="form-input">
+              <span><i class="fa fa-user"></i></span>
+              <input type="text" name="" placeholder="Username" tabindex="10" id="username" required>
+            </div>
+            <div class="form-input" >
+              <span><i class="fa fa-key"></i></span>
+              <input type="password" name="password" id="password" placeholder="Password" onkeyup='check();' required>
+            </div>
+
+            <div class="form-input">
+              <span><i class="fa fa-key"></i></span>
+              <input type="password" name="passwordRe" id="passwordRe" placeholder="Input Password Again" title="Repeated password not matching the password" onkeyup='check();' required>
+              
+            </div>
+
+            <div class="text-right">
+              <span id='message'></span>
+            </div>
+
+
+            <div class="mb-3">
+              <button type="submit" id="submit" class="btn btn-block text-uppercase" onclick="SignUp()">
+                Sign Up
+              </button>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="text-center mb-2">
+              Have an account?
+              <a href="login.html" class="register-link">
+                Login here
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
