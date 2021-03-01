@@ -22,6 +22,17 @@
     ],
     "videos": [
       {
+        "video_name": "EASY Pinewood Derby Car WINS using Science!!!",
+        "category": "Info",
+        "location": "Millcreek Valley",
+        "latitude": 38.631135,
+        "longitude" : -90.220397,
+        "video_id": 61,
+        "title": "This is where millcreek valley used to be",
+        "link": "https://www.youtube.com/embed?v=XGQFJZVOw4g",
+        "allComments": []
+      },
+      {
         "video_name": "Elias Sime and the Mother(board)s of Invention",
         "category": "Culture",
         "location": "Saint Louis Art Museum",

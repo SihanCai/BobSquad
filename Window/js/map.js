@@ -2,50 +2,28 @@ let map;
 const sportsIcon = "img/baseline_sports_tennis_black_18dp.png";
 const AttractionsIcon = "img/baseline_local_see_black_18dp.png";
 const CultureIcon = "img/baseline_museum_black_18dp.png";
-// let dummyData = {
-//     "data": [
-//         {
-//             video_name: "Saint Louis Zoo",
-//             category: "Attractions",
-//             latitude: 38.63660172477592,
-//             longitude: -90.29270907735156,
-//             location: "Saint Louis Zoo",
-//             // position: {lat: 38.63660172477592, lng: -90.29270907735156},
-//             video_id: 1,
-//         },
-//         {
-//             video_name: "Saint Louis Art Museum",
-//             category: "Culture",
-//             latitude: 38.63959833792551,
-//             longitude: -90.2945311303329,
-//             location: "Saint Louis Art Museum",
-//             // position: {lat: 38.63959833792551, lng: -90.2945311303329},
-//             video_id: 2,
-//         },
-//         {
-//             video_name: "Missouri History Museum",
-//             location: "Missouri History Museum",
-//             category: "Culture",
-//             latitude: 38.64551555006555,
-//             longitude: -90.28585240429031,
-//             // position: {lat: 38.64551555006555, lng: -90.28585240429031},
-//             video_id: 3,
-//         },
-//         {
-//             video_name: "Forest Park Golf Course",
-//             location: "Forest Park Golf Course",
-//             category: "Sports",
-//             latitude: 38.64472447732657,
-//             longitude: -90.29645284769301,
-//             // position: {lat: 38.64472447732657, lng: -90.29645284769301},
-//             video_id: 4,
-//         },
-//     ]
-// };
+const infoIcon = "img/info_icon_18dp.png";
+
 let AttractionsMarkers = [];
 let CultureMarkers = [];
 let SportsMarkers = [];
+let InfoMarkers = [];
 let dummyData={"data":[]};
+let myStyles =[
+    {
+        featureType: "poi",
+        elementType: "labels",
+        stylers: [
+              { visibility: "off" }
+        ]
+    },
+    {
+        featureType: "transit",
+        stylers: [
+            { visibility: "off" }
+      ]
+    }
+];
 function setIcons() {
     dummyData.data.forEach(element => {
         if (element.category === "Sports") {
@@ -54,6 +32,8 @@ function setIcons() {
             element.icon=CultureIcon;
         } else if (element.category === "Attractions") {
             element.icon = AttractionsIcon;
+        } else if (element.category === "Info") {
+            element.icon = infoIcon;
         }
     })
 }
@@ -63,11 +43,22 @@ function initMap() {
     setIcons();
     map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: 38.638821, lng: -90.284174},
-        zoom: 15,
+        zoom: 12,
+        styles: myStyles
     });
     dummyData.data.forEach(element => {
         let position = {lat: element.latitude, lng: element.longitude};
-        let marker = new google.maps.Marker({position, map, icon: element.icon});
+        let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title});
+
+        // Open infowindow on mouse hover
+        marker.addListener('mouseover', function() {
+            element.info_window.open(map, this);
+        });
+        
+        // Closing infowindow on mouse out
+        marker.addListener('mouseout', function() {
+            element.info_window.close();
+        });
         switch (element.category) {
             case "Culture":
                 CultureMarkers.push(marker);
@@ -78,6 +69,8 @@ function initMap() {
             case "Sports":
                 SportsMarkers.push(marker);
                 break;
+            case "Info":
+                InfoMarkers.push(marker);
             default:
                 break;
         }
@@ -88,6 +81,7 @@ function initMap() {
         })(marker));
     });
 }
+
 
 function handleCheckBox(checkboxElem) {
     if (checkboxElem.checked) {
@@ -110,6 +104,10 @@ function setMapOnAll(map, category) {
     } else if (category === "attractions") {
         for (let i = 0; i < AttractionsMarkers.length; i++) {
             AttractionsMarkers[i].setMap(map);
+        }
+    } else if (category === "info") {
+        for (let i = 0; i < InfoMarkers.length; i++) {
+            InfoMarkers[i].setMap(map);
         }
     }
 }
