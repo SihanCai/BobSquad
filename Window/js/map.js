@@ -3,6 +3,7 @@ const sportsIcon = "img/baseline_sports_tennis_black_18dp.png";
 const AttractionsIcon = "img/baseline_local_see_black_18dp.png";
 const CultureIcon = "img/baseline_museum_black_18dp.png";
 const infoIcon = "img/info_icon_18dp.png";
+const videoIcon = "img/video_icon_18dp.png";
 
 let AttractionsMarkers = [];
 let CultureMarkers = [];
