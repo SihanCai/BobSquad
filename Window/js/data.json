@@ -34,7 +34,7 @@
       },
       {
         "video_name": "Elias Sime and the Mother(board)s of Invention",
-        "category": "Culture",
+        "category": "Time2",
         "location": "Saint Louis Art Museum",
         "latitude": 38.63959833792551,
         "longitude": -90.2945311303329,
@@ -44,7 +44,7 @@
       },
       {
         "video_name": "Elias Sime Crafts a New Narrative with Reclaimed Technology at SLAM",
-        "category": "Culture",
+        "category": "Time2",
         "location": "Saint Louis Art Museum",
         "latitude": 38.63959833792551,
         "longitude": -90.2945311303329,
@@ -54,7 +54,7 @@
       },
       {
         "video_name": "Shakespeare in Forest Park",
-        "category": "Attractions",
+        "category": "Time3",
         "location": "Shakespeare in the Park",
         "latitude": 38.63869348485723, 
         "longitude": -90.29162330455381,
@@ -64,7 +64,7 @@
       },
       {
         "video_name": "A Late Summer Night's Stroll",
-        "category": "Attractions",
+        "category": "Time3",
         "location": "Shakespeare in the Park",
         "latitude": 38.63869348485723,
         "longitude": -90.29162330455381,
@@ -74,7 +74,7 @@
       },
       {
         "video_name": "Shakespeare in the Park 2019",
-        "category": "Attractions",
+        "category": "Time3",
         "location": "Shakespeare in the Park",
         "latitude": 38.63869348485723,
         "longitude": -90.29162330455381,
@@ -94,7 +94,7 @@
       },
       {
         "video_name": "Highlands Golf & Tennis Virtual Tour",
-        "category": "Sports",
+        "category": "Time1",
         "location": "The Highlands Golf & Tennis",
         "latitude": 38.63449992321969,
         "longitude": -90.27205561097968,
@@ -194,7 +194,7 @@
       },
       {
         "video_name": "GoGirlGo Tennis Day -- St. Louis",
-        "category": "Sports",
+        "category": "Time1",
         "location": "Dwight Davis Tennis Center",
         "latitude": 38.64303945408214,
         "longitude": -90.2852272174069,

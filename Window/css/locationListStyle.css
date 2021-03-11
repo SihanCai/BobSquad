@@ -51,16 +51,16 @@ h2{
   display:none;
 }
 #All:checked ~ .panels #All-panel,
-#Sports:checked ~ .panels #Sports-panel,
-#Culture:checked ~ .panels #Culture-panel,
-#Attractions:checked ~ .panels #Attractions-panel{
+#Time1:checked ~ .panels #Time1-panel,
+#Time2:checked ~ .panels #Time2-panel,
+#Time3:checked ~ .panels #Time3-panel{
   display:block
 }
 
 #All:checked ~ .tabs #All-tab,
-#Sports:checked ~ .tabs #Sports-tab,
-#Culture:checked ~ .tabs #Culture-tab,
-#Attractions:checked ~ .tabs #Attractions-tab{
+#Time1:checked ~ .tabs #Time1-tab,
+#Time2:checked ~ .tabs #Time2-tab,
+#Time3:checked ~ .tabs #Time3-tab{
   background:#fffffff6;
   color:#000;
   border-top: 3px solid #000;

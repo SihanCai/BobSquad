@@ -57,22 +57,22 @@
 function addLocation(){
     let allVideos = JSON.parse(sessionStorage.getItem("videos"));
     let all = document.getElementById("all");
-    let sports = document.getElementById("sports");
-    let culture = document.getElementById("culture");
-    let attraction = document.getElementById("attraction");
+    let time1 = document.getElementById("time1");
+    let time2 = document.getElementById("time2");
+    let time3 = document.getElementById("time3");
     let myset = new Set();
     for(let i = 0;i<allVideos.length;i++){
         if(myset.has(allVideos[i].location)) continue;
         myset.add(allVideos[i].location);
         all.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
-        if("Sports" === allVideos[i].category){
-            sports.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        if("Time1" === allVideos[i].category){
+            time1.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
-        if("Culture" === allVideos[i].category){
-            culture.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        if("Time2" === allVideos[i].category){
+            time2.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
-        if("Attractions" === allVideos[i].category){
-            attraction.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        if("Time3" === allVideos[i].category){
+            time3.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
     }
 }

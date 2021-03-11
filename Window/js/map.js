@@ -5,9 +5,14 @@ const CultureIcon = "img/baseline_museum_black_18dp.png";
 const infoIcon = "img/info_icon_18dp.png";
 const videoIcon = "img/video_icon_18dp.png";
 
-let AttractionsMarkers = [];
-let CultureMarkers = [];
-let SportsMarkers = [];
+//Pre-1900s
+let time1Markers = [];
+//1900-1930
+let time2Markers = [];
+//1940-1960
+let time3Markers = [];
+//1960 to present
+//let time4Markers = [];
 let InfoMarkers = [];
 let dummyData={"data":[]};
 let myStyles =[
@@ -27,11 +32,11 @@ let myStyles =[
 ];
 function setIcons() {
     dummyData.data.forEach(element => {
-        if (element.category === "Sports") {
+        if (element.category === "Time1") {
             element.icon = sportsIcon;
-        } else if (element.category === "Culture") {
+        } else if (element.category === "Time2") {
             element.icon=CultureIcon;
-        } else if (element.category === "Attractions") {
+        } else if (element.category === "Time3") {
             element.icon = AttractionsIcon;
         } else if (element.category === "Info") {
             element.icon = infoIcon;
@@ -141,14 +146,14 @@ function initMap() {
             element.info_window.close();
         });
         switch (element.category) {
-            case "Culture":
-                CultureMarkers.push(marker);
+            case "Time1":
+                time1Markers.push(marker);
                 break;
-            case "Attractions":
-                AttractionsMarkers.push(marker);
+            case "Time2":
+                time2Markers.push(marker);
                 break;
-            case "Sports":
-                SportsMarkers.push(marker);
+            case "Time3":
+                time3Markers.push(marker);
                 break;
             case "Info":
                 InfoMarkers.push(marker);
@@ -174,17 +179,17 @@ function handleCheckBox(checkboxElem) {
 
 // Sets the map on all markers in the array.
 function setMapOnAll(map, category) {
-    if (category === "sports") {
-        for (let i = 0; i < SportsMarkers.length; i++) {
-            SportsMarkers[i].setMap(map);
+    if (category === "time1") {
+        for (let i = 0; i < time1Markers.length; i++) {
+            time1Markers[i].setMap(map);
         }
-    } else if (category === "culture") {
-        for (let i = 0; i < CultureMarkers.length; i++) {
-            CultureMarkers[i].setMap(map);
+    } else if (category === "time2") {
+        for (let i = 0; i < time2Markers.length; i++) {
+            time2Markers[i].setMap(map);
         }
-    } else if (category === "attractions") {
-        for (let i = 0; i < AttractionsMarkers.length; i++) {
-            AttractionsMarkers[i].setMap(map);
+    } else if (category === "time3") {
+        for (let i = 0; i < time3Markers.length; i++) {
+            time3Markers[i].setMap(map);
         }
     } else if (category === "info") {
         for (let i = 0; i < InfoMarkers.length; i++) {
