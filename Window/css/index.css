@@ -1,6 +1,11 @@
+/* adding variable for js access*/
+:root {
+    --mapHeight: 60%;
+}
+
 #map {
     position: fixed !important;
-    height: 600px;
+    height: var(--mapHeight);
     width: 100% !important;
 }
 

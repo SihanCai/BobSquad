@@ -43,13 +43,19 @@ function setIcons() {
         }
     })
 }
+//get height of map for zoom value
+let mapHeight =  getComputedStyle(document.documentElement)
+                .getPropertyValue('--mapHeight');
+//get user's window height to have a good zoom starting value
+var percentage = parseInt(mapHeight, 10)*$(window).height()/100;
 
 function initMap() {
     dummyData.data=JSON.parse(sessionStorage.getItem("videos"));
     setIcons();
     map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: 38.6814, lng: -90.28267},
-        zoom: 12,
+        //values chosen by trial and error
+        zoom: 10 + 2.4*percentage/600,
         styles: myStyles
     });
     // Define the LatLng coordinates for the greaterVille polygon path.
