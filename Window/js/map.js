@@ -33,7 +33,7 @@ let myStyles =[
 function setIcons() {
     dummyData.data.forEach(element => {
         if (element.category === "Time1") {
-            element.icon = sportsIcon;
+            element.icon = videoIcon;
         } else if (element.category === "Time2") {
             element.icon=CultureIcon;
         } else if (element.category === "Time3") {
