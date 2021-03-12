@@ -23,6 +23,7 @@
     "videos": [
       {
         "video_name": "EASY Pinewood Derby Car WINS using Science!!!",
+        "pin": "Info",
         "category": "Info",
         "location": "Millcreek Valley",
         "latitude": 38.631135,
@@ -34,26 +35,29 @@
       },
       {
         "video_name": "Elias Sime and the Mother(board)s of Invention",
+        "pin": "Video",
         "category": "Time1",
         "location": "Kinloch",
-        "latitude": 38.73358348104857,
-        "longitude": -90.32427535261911,
+        "latitude": 38.73124007169525, 
+        "longitude": -90.32315955849795,
         "video_id": 60,
         "link": "https://www.youtube.com/embed?v=csRH-w96UFo",
         "allComments": [1,2]
       },
       {
         "video_name": "Elias Sime Crafts a New Narrative with Reclaimed Technology at SLAM",
+        "pin": "Video",
         "category": "Time2",
         "location": "Kinloch",
-        "latitude": 38.741550492604645, 
-        "longitude": -90.32985434688572,
+        "latitude": 38.738069217200085, 
+        "longitude": -90.32848106097286,
         "video_id": 59,
         "link": "https://www.youtube.com/embed?v=EbBlyN3FPC0",
         "allComments": [1]
       },
       {
         "video_name": "Kinky Boots at The Muny!",
+        "pin": "Image",
         "category": "Time3",
         "location": "Kinloch",
         "latitude": 38.73920734616699, 
@@ -64,36 +68,40 @@
       },
       {
         "video_name": "Shakespeare in Forest Park",
+        "pin": "Image",
         "category": "Time1",
         "location": "Millcreek Valley",
-        "latitude": 38.63489094263752, 
-        "longitude": -90.22926800204485, 
+        "latitude": 38.63201952973681, 
+        "longitude": -90.23052051192906, 
         "video_id": 58,
         "link": "https://www.youtube.com/embed?v=vBWeD2etgf8",
         "allComments": [2,3]
       },
       {
         "video_name": "A Late Summer Night's Stroll",
+        "pin": "Video",
         "category": "Time2",
         "location": "Millcreek Valley",
-        "latitude": 38.626487830721665, 
-        "longitude": -90.2211360560915,
+        "latitude": 38.62615774554131, 
+        "longitude": -90.21944892329631,
         "video_id": 57,
         "link": "https://www.youtube.com/embed?v=tW794H9D1xI",
         "allComments": [1,3]
       },
       {
         "video_name": "Shakespeare in the Park 2019",
+        "pin": "Video",
         "category": "Time3",
         "location": "Millcreek Valley",
-        "latitude": 38.630176619705175, 
-        "longitude": -90.21415588563497,
+        "latitude": 38.62748358937127, 
+        "longitude": -90.21319649330046,
         "video_id": 56,
         "link": "https://www.youtube.com/embed?v=R8oOcHs6Cpw",
         "allComments": [1,2,3]
       },
       {
         "video_name": "KETC | Living St. Louis | Shakespeare in the Park",
+        "pin": "Video",
         "category": "Time1",
         "location": "Greater Ville",
         "latitude": 38.66672492931168, 
@@ -104,6 +112,7 @@
       },
       {
         "video_name": "Highlands Golf & Tennis Virtual Tour",
+        "pin": "Image",
         "category": "Time2",
         "location": "Greater Ville",
         "latitude": 38.661598019249375, 
@@ -114,6 +123,7 @@
       },
       {
         "video_name": "\"Everybody Say Yeah\" from Kinky Boots | The Muny",
+        "pin": "Video",
         "category": "Time3",
         "location": "Greater Ville",
         "latitude": 38.65901668546222, 

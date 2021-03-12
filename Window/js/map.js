@@ -3,7 +3,8 @@ const sportsIcon = "img/baseline_sports_tennis_black_18dp.png";
 const AttractionsIcon = "img/baseline_local_see_black_18dp.png";
 const CultureIcon = "img/baseline_museum_black_18dp.png";
 const infoIcon = "img/info_icon_18dp.png";
-const videoIcon = "img/video_icon_18dp.png";
+const videoIcon = "img/video_Icon_small.png";
+const imageIcon = "img/camera_Icon_small.png";
 
 //Pre-1900s
 let time1Markers = [];
@@ -32,17 +33,17 @@ let myStyles =[
 ];
 function setIcons() {
     dummyData.data.forEach(element => {
-        if (element.category === "Time1") {
+        if (element.pin === "Image") {
+            element.icon = imageIcon;
+        } else if (element.pin === "Video") {
             element.icon = videoIcon;
-        } else if (element.category === "Time2") {
-            element.icon=CultureIcon;
-        } else if (element.category === "Time3") {
-            element.icon = AttractionsIcon;
-        } else if (element.category === "Info") {
+        } else if (element.pin === "Info") {
             element.icon = infoIcon;
         }
     })
 }
+
+
 //get height of map for zoom value
 let mapHeight =  getComputedStyle(document.documentElement)
                 .getPropertyValue('--mapHeight');
