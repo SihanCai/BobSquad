@@ -56,7 +56,8 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: 38.6814, lng: -90.28267},
         //values chosen by trial and error
-        zoom: 10 + 2.4*percentage/600,
+        //zoom: 10 + 2.4*percentage/600,
+        zoom: 12,
         styles: myStyles
     });
     // Define the LatLng coordinates for the greaterVille polygon path.
