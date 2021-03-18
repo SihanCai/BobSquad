@@ -26,7 +26,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
-        <ul class="navbar-nav w-100 justify-content-center" style="margin-left: 20%">
+        <ul class="navbar-nav w-100 justify-content-center" style="margin-right: 15%">
             <li class="nav-item active">
                 <form class="form-inline my-2 my-lg-0" action="searchResult.html" method="GET">
                     <input type="search" name="keyword" class="form-control mr-sm-2" placeholder="Search"
@@ -35,32 +35,32 @@
                 </form>
             </li>
         </ul>
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-            <li class="nav-item" id="login-btn">
-                <a href="login.html">
-                    <button class="btn  tm-btn-send">Login</button>
-                </a>
-            </li>
-            <li class="nav-item" id="upload-btn">
-                <a href="uploadVideos.html">
-                    <button class="btn  tm-btn-upload">Upload Video</button>
-                </a>
-            </li>
-            <li class="nav-item" id="account-btn">
-                <a href="manageVideos.html">
-                    <button class="btn tm-btn-account" id="account_name">Account</button>
-                </a>
-            </li>
-            <li class="nav-item" id="logout-btn">
-
-                    <button class="btn  tm-btn-send" onclick="logout()">Log out</button>
-
-            </li>
-        </ul>
     </div>
 </nav>
 
-<div class="mx-auto" style="width: 600px">
+<div style="width: 100%; height: 60px; text-align: center">
+    <div class="mx-auto" style="width: 600px; display:inline-block; margin-top: 5px">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox1" value="time1" checked onchange="handleCheckBox(this)">
+            <label class="form-check-label font-xx-large" for="inlineCheckbox1">Time1</label>
+        </div>
+        <div class="form-check form-check-inline ">
+            <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox2" value="time2" checked onchange="handleCheckBox(this)">
+            <label class="form-check-label font-xx-large" for="inlineCheckbox2">Time2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox3" value="time3" checked onchange="handleCheckBox(this)">
+            <label class="form-check-label font-xx-large" for="inlineCheckbox3">Time3</label>
+        </div>
+    </div>
+    <div class="nav justify-content-end location-list" style="display:inline-block">
+        <a href="locationList.html">
+            <button type="button" class="btn btn-light">List of Locations</button>
+        </a>
+    </div>
+</div>
+
+<!-- <div class="mx-auto" style="width: 600px">
     <div class="form-check form-check-inline">
         <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox1" value="time1" checked onchange="handleCheckBox(this)">
         <label class="form-check-label font-xx-large" for="inlineCheckbox1">Time1</label>
@@ -78,7 +78,7 @@
     <a href="locationList.html">
         <button type="button" class="btn btn-light">List of Locations</button>
     </a>
-</div>
+</div> -->
 
 <div id="map"></div>
 </body>
