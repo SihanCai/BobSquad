@@ -1,12 +1,16 @@
 /* adding variable for js access*/
 :root {
     --mapHeight: 60%;
+    --margin: 6%
 }
 
 #map {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
     position: fixed !important;
     height: var(--mapHeight);
-    width: 100% !important;
+    width: calc(100% - 2*var(--margin)) !important;
+    border: 4px solid black;
 }
 
 .font-xx-large {
@@ -35,6 +39,6 @@
     right: 0;
     margin: auto;
     margin-top: 10px;
-    margin-right: 3%;
+    margin-right: 7%;
     white-space: nowrap;
 }
