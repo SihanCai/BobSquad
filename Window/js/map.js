@@ -43,21 +43,39 @@ function setIcons() {
     })
 }
 
+// The mapping between latitude, longitude and pixels is defined by the web
+// mercator projection.
+const TILE_SIZE = 256;
+function project(latLng) {
+    let siny = Math.sin((latLng.lat() * Math.PI) / 180);
+    // Truncating to 0.9999 effectively limits latitude to 89.189. This is
+    // about a third of a tile past the edge of the world tile.
+    siny = Math.min(Math.max(siny, -0.9999), 0.9999);
+    return new google.maps.Point(
+      TILE_SIZE * (0.5 + latLng.lng() / 360),
+      TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI))
+    );
+  }
 
-//get height of map for zoom value
-let mapHeight =  getComputedStyle(document.documentElement)
-                .getPropertyValue('--mapHeight');
-//get user's window height to have a good zoom starting value
-var percentage = parseInt(mapHeight, 10)*$(window).height()/100;
+
+//Bottom y coord: 38.631494277480485, -90.25106836419666
+//Top y coord: 38.75079132515602, -90.32725639266114
 
 function initMap() {
     dummyData.data=JSON.parse(sessionStorage.getItem("videos"));
     setIcons();
+
+    var heightPix = document.getElementById("map").offsetHeight;
+    //lng coords don't matter
+    const bottomLatLng = new google.maps.LatLng(38.631494277480485, -90.2);
+    let bottomGlobalCoord = project(bottomLatLng);
+
     map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 38.6814, lng: -90.28267},
+        center: {lat: 38.6884, lng: -90.28267},
         //values chosen by trial and error
         //zoom: 10 + 2.4*percentage/600,
-        zoom: 12,
+        zoom: Math.floor(Math.log(heightPix*512/bottomGlobalCoord.x)/Math.log(2)),
+        //zoom: 11,
         styles: myStyles
     });
     // Define the LatLng coordinates for the greaterVille polygon path.
