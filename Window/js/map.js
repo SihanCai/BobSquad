@@ -135,7 +135,7 @@ function initMap() {
         strokeColor: "#0F9D58",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0F9D58",
+        fillColor: "#0097A7",
         fillOpacity: 0.25,
     });
     millCreekValleyArea.setMap(map);
