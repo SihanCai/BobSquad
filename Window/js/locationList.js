@@ -62,9 +62,11 @@ function addLocation(){
     let time3 = document.getElementById("time3");
     let myset = new Set();
     for(let i = 0;i<allVideos.length;i++){
-        if(myset.has(allVideos[i].location)) continue;
+        //if(myset.has(allVideos[i].location)) continue;
+        if(myset.has(allVideos[i].location)==false){
+            all.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        }
         myset.add(allVideos[i].location);
-        all.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         if("Time1" === allVideos[i].category){
             time1.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }

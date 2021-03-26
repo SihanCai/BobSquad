@@ -71,10 +71,10 @@ function initMap() {
     let bottomGlobalCoord = project(bottomLatLng);
 
     map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 38.6884, lng: -90.28267},
+        center: {lat: 38.6864, lng: -90.28267},
         //values chosen by trial and error
         //zoom: 10 + 2.4*percentage/600,
-        zoom: Math.floor(Math.log(heightPix*512/bottomGlobalCoord.x)/Math.log(2)),
+        zoom: Math.floor(Math.log(heightPix*550/bottomGlobalCoord.x)/Math.log(2)),
         //zoom: 11,
         styles: myStyles
     });
