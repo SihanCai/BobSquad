@@ -17,7 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
+<!-- navigation bar -->
 <nav class="navbar navbar-dark navbar-expand-md bg-dark justify-content-center sticky-top py-0">
     <a href="index.html" class="navbar-brand d-flex w-40 mr-auto site-name ">
         <img src="img/1small.png" width="60" height="60">&nbsp;Bob's Bus Tour
@@ -38,6 +40,7 @@
     </div>
 </nav>
 
+<!-- time period checkboxes -->
 <div style="width: 100%; height: 60px; text-align: left; margin-left: 7%">
     <div class="mx-auto" style="width: 600px; display:inline-block; margin-top: 5px">
         <div class="form-check form-check-inline">
@@ -60,27 +63,9 @@
     </div>
 </div>
 
-<!-- <div class="mx-auto" style="width: 600px">
-    <div class="form-check form-check-inline">
-        <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox1" value="time1" checked onchange="handleCheckBox(this)">
-        <label class="form-check-label font-xx-large" for="inlineCheckbox1">Time1</label>
-    </div>
-    <div class="form-check form-check-inline ">
-        <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox2" value="time2" checked onchange="handleCheckBox(this)">
-        <label class="form-check-label font-xx-large" for="inlineCheckbox2">Time2</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox3" value="time3" checked onchange="handleCheckBox(this)">
-        <label class="form-check-label font-xx-large" for="inlineCheckbox3">Time3</label>
-    </div>
-</div>
-<div class="nav justify-content-end" style="margin-right: 3%; margin-bottom: 1%">
-    <a href="locationList.html">
-        <button type="button" class="btn btn-light">List of Locations</button>
-    </a>
-</div> -->
-
+<!-- map -->
 <div id="map"></div>
+
 </body>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 

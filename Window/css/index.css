@@ -13,6 +13,10 @@
     border: 4px solid black;
 }
 
+.map-wrapper {
+    height: 100%;
+}
+
 .font-xx-large {
     font-size: xx-large;
 }

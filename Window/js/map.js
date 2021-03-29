@@ -1,20 +1,12 @@
 let map;
-const sportsIcon = "img/baseline_sports_tennis_black_18dp.png";
-const AttractionsIcon = "img/baseline_local_see_black_18dp.png";
-const CultureIcon = "img/baseline_museum_black_18dp.png";
-const infoIcon = "img/info_icon_18dp.png";
 const videoIcon = "img/video_Icon_small.png";
 const imageIcon = "img/camera_Icon_small.png";
 
-//Pre-1900s
-let time1Markers = [];
-//1900-1930
-let time2Markers = [];
-//1940-1960
-let time3Markers = [];
-//1960 to present
-//let time4Markers = [];
-let InfoMarkers = [];
+
+let time1Markers = [];  //Pre-1900s
+let time2Markers = [];  //1900-1930
+let time3Markers = [];  //1940-present
+
 let dummyData={"data":[]};
 let myStyles =[
     {
@@ -37,8 +29,6 @@ function setIcons() {
             element.icon = imageIcon;
         } else if (element.pin === "Video") {
             element.icon = videoIcon;
-        } else if (element.pin === "Info") {
-            element.icon = infoIcon;
         }
     })
 }
@@ -150,10 +140,10 @@ function initMap() {
     // Construct the millCreekValley polygon.
     const millCreekValleyArea = new google.maps.Polygon({
         paths: millCreekValleyCoords,
-        strokeColor: "#0F9D58",
+        strokeColor: "#1A237E",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0097A7",
+        fillColor: "#1A237E",
         fillOpacity: 0.25,
     });
     millCreekValleyArea.setMap(map);
@@ -181,8 +171,6 @@ function initMap() {
             case "Time3":
                 time3Markers.push(marker);
                 break;
-            case "Info":
-                InfoMarkers.push(marker);
             default:
                 break;
         }
@@ -216,10 +204,6 @@ function setMapOnAll(map, category) {
     } else if (category === "time3") {
         for (let i = 0; i < time3Markers.length; i++) {
             time3Markers[i].setMap(map);
-        }
-    } else if (category === "info") {
-        for (let i = 0; i < InfoMarkers.length; i++) {
-            InfoMarkers[i].setMap(map);
         }
     }
 }
