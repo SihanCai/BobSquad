@@ -1,13 +1,15 @@
 let map;
 const videoIcon = "img/video_Icon_small.png";
 const imageIcon = "img/camera_Icon_small.png";
+const clusterImagePath = "img/";
 
 
 let time1Markers = [];  //Pre-1900s
 let time2Markers = [];  //1900-1930
 let time3Markers = [];  //1940-present
+let markers = [];
 
-let dummyData={"data":[]};
+let siteData={"data":[]};
 let myStyles =[
     {
         featureType: "poi",
@@ -24,7 +26,7 @@ let myStyles =[
     }
 ];
 function setIcons() {
-    dummyData.data.forEach(element => {
+    siteData.data.forEach(element => {
         if (element.pin === "Image") {
             element.icon = imageIcon;
         } else if (element.pin === "Video") {
@@ -52,7 +54,7 @@ function project(latLng) {
 //Top y coord: 38.75079132515602, -90.32725639266114
 
 function initMap() {
-    dummyData.data=JSON.parse(sessionStorage.getItem("videos"));
+    siteData.data=JSON.parse(sessionStorage.getItem("videos"));
     setIcons();
 
     var heightPix = document.getElementById("map").offsetHeight;
@@ -148,38 +150,46 @@ function initMap() {
     });
     millCreekValleyArea.setMap(map);
 
-    dummyData.data.forEach(element => {
+    siteData.data.forEach(element => {
         let position = {lat: element.latitude, lng: element.longitude};
         let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title});
 
-        // Open infowindow on mouse hover
-        marker.addListener('mouseover', function() {
-            element.info_window.open(map, this);
-        });
+        // // Open infowindow on mouse hover
+        // marker.addListener('mouseover', function() {
+        //     element.info_window.open(map, this);
+        // });
         
-        // Closing infowindow on mouse out
-        marker.addListener('mouseout', function() {
-            element.info_window.close();
-        });
-        switch (element.category) {
-            case "Time1":
-                time1Markers.push(marker);
-                break;
-            case "Time2":
-                time2Markers.push(marker);
-                break;
-            case "Time3":
-                time3Markers.push(marker);
-                break;
-            default:
-                break;
-        }
+        // // Closing infowindow on mouse out
+        // marker.addListener('mouseout', function() {
+        //     element.info_window.close();
+        // });
+        // switch (element.category) {
+        //     case "Time1":
+        //         time1Markers.push(marker);
+        //         break;
+        //     case "Time2":
+        //         time2Markers.push(marker);
+        //         break;
+        //     case "Time3":
+        //         time3Markers.push(marker);
+        //         break;
+        //     default:
+        //         break;
+        // }
         google.maps.event.addListener(marker, 'click', (function (marker) {
             return function () {
                 window.location.href = "videoList.html?location=" + element.location;
             }
         })(marker));
+        markers.push(marker);
     });
+    var mc = new MarkerClusterer(map, markers, {imagePath: `${clusterImagePath}/m`, averageCenter: true});
+    $('#refresh').click(function() {
+        refreshMap()
+    })
+    $('#clear').click(function() {
+            clearClusters()
+    })
 }
 
 
@@ -216,4 +226,18 @@ function clearMarkers(category) {
 // Deletes all markers in the array by removing references to them.
 function deleteMarkers(category) {
     clearMarkers(category);
+}
+
+function refreshMap() {
+    if (markerClusterer) {
+            markerClusterer.clearMarkers();
+            // 				markerClusterer.addMarkers(markers,true)
+            markerClusterer.addMarkers(markers)
+    }
+}
+
+function clearClusters(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    markerClusterer.clearMarkers();
 }
