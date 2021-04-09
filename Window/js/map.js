@@ -88,7 +88,7 @@ function project(latLng) {
   }
 
 
-//Bottom y coord: 38.631494277480485, -90.25106836419666
+//Bottom y coord: 38.609298748555595, -90.27506700810305
 //Top y coord: 38.75079132515602, -90.32725639266114
 
 function initMap() {
@@ -97,14 +97,14 @@ function initMap() {
 
     var heightPix = document.getElementById("map").offsetHeight;
     //lng coords don't matter
-    const bottomLatLng = new google.maps.LatLng(38.631494277480485, -90.2);
+    const bottomLatLng = new google.maps.LatLng(38.609298748555595, -90.2);
     let bottomGlobalCoord = project(bottomLatLng);
 
     map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 38.6864, lng: -90.28267},
+        center: {lat: 38.6844, lng: -90.28267},
         //values chosen by trial and error
         //zoom: 10 + 2.4*percentage/600,
-        zoom: Math.floor(Math.log(heightPix*550/bottomGlobalCoord.x)/Math.log(2)),
+        zoom: Math.floor(Math.log(heightPix*500/bottomGlobalCoord.x)/Math.log(2)),
         //zoom: 11,
         styles: myStyles
     });
