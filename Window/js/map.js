@@ -26,6 +26,34 @@ let myStyles =[
     }
 ];
 
+// icon object for legend
+const icons = {
+    video: {
+        name: "Videos",
+        icon: videoIcon,
+    },
+    image: {
+        name: "Images",
+        icon: imageIcon,
+    },
+    info: {
+        name: "Info",
+        icon: infoIcon,
+    },
+    health: {
+        name: "Health",
+        icon: healthIcon,
+    },
+    housing: {
+      name: "Housing",
+      icon: housingIcon,
+    },
+    education: {
+      name: "Education",
+      icon: schoolIcon,
+    },
+};
+
 // Set different catagory icons for markers
 function setIcons() {
     siteData.data.forEach(element => {
@@ -245,4 +273,16 @@ function initMap() {
 
     // set marker clustering
     new MarkerClusterer(map, markers, {imagePath: `${clusterImagePath}/m`, averageCenter: true});
+
+    // map legend
+    const legend = document.getElementById("legend");
+    for (const key in icons) {
+        const type = icons[key];
+        const name = type.name;
+        const icon = type.icon;
+        const div = document.createElement("div");
+        div.innerHTML = '<img src="' + icon + '"> ' + '<span style="color: black;">' + name + '</span>';
+        legend.appendChild(div);
+    }
+    map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 }
