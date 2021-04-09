@@ -1,7 +1,10 @@
 let map;
 const videoIcon = "img/video_Icon_small.png";
 const imageIcon = "img/camera_Icon_small.png";
-const infoIcon = "img/info_icon_18dp.png";
+const infoIcon = "img/Info_4.png";
+const healthIcon = "img/Plus_4.png";
+const housingIcon = "img/Building_4.png";
+const schoolIcon = "img/Graduation Cap_4.png";
 const clusterImagePath = "img/";
 
 let siteData={"data":[]};
@@ -32,6 +35,12 @@ function setIcons() {
             element.icon = videoIcon;
         } else if (element.pin === "Info") {
             element.icon = infoIcon;
+        } else if (element.pin === "Health") {
+            element.icon = healthIcon;
+        } else if (element.pin === "School") {
+            element.icon = schoolIcon;
+        } else if (element.pin === "Housing") {
+            element.icon = housingIcon;
         }
     })
 }

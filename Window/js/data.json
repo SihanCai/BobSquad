@@ -3,7 +3,7 @@
     "videos": [
       {
         "video_name": "Lewis Place",
-        "pin": "Info",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.653593497934,
@@ -13,7 +13,7 @@
       },
       {
         "video_name": "Visitation Park",
-        "pin": "Info",
+        "pin": "Health",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.65613308485759,
@@ -23,7 +23,7 @@
       },
       {
         "video_name": "Bulldozed Black Cemetery",
-        "pin": "Info",
+        "pin": "Health",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.74200089614123,
@@ -33,7 +33,7 @@
       },
       {
         "video_name": "Westland Acres",
-        "pin": "Info",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.642408435163304,
@@ -43,7 +43,7 @@
       },
       {
         "video_name": "Evans-Howard Place",
-        "pin": "Info",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.6243252539107,
@@ -53,7 +53,7 @@
       },
       {
         "video_name": "The Hill",
-        "pin": "Info",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.61689659810362,
@@ -73,7 +73,7 @@
       },
       {
         "video_name": "McRee Town",
-        "pin": "Info",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Miscellaneous",
         "latitude": 38.61867771364454,
@@ -93,7 +93,7 @@
       },
       {
         "video_name": "Elias Sime and the Mother(board)s of Invention",
-        "pin": "Video",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Kinloch",
         "latitude": 38.73124007169525, 
@@ -103,7 +103,7 @@
       },
       {
         "video_name": "Elias Sime Crafts a New Narrative with Reclaimed Technology at SLAM",
-        "pin": "Video",
+        "pin": "School",
         "category": "Time2",
         "location": "Kinloch",
         "latitude": 38.738069217200085, 
@@ -113,7 +113,7 @@
       },
       {
         "video_name": "Kinky Boots at The Muny!",
-        "pin": "Image",
+        "pin": "Health",
         "category": "Time3",
         "location": "Kinloch",
         "latitude": 38.73920734616699, 
@@ -123,7 +123,7 @@
       },
       {
         "video_name": "Shakespeare in Forest Park",
-        "pin": "Image",
+        "pin": "Housing",
         "category": "Time1",
         "location": "Millcreek Valley",
         "latitude": 38.63201952973681, 
@@ -133,7 +133,7 @@
       },
       {
         "video_name": "A Late Summer Night's Stroll",
-        "pin": "Video",
+        "pin": "School",
         "category": "Time2",
         "location": "Millcreek Valley",
         "latitude": 38.62615774554131, 
@@ -143,7 +143,7 @@
       },
       {
         "video_name": "Shakespeare in the Park 2019",
-        "pin": "Video",
+        "pin": "Health",
         "category": "Time3",
         "location": "Millcreek Valley",
         "latitude": 38.62748358937127, 
@@ -153,7 +153,7 @@
       },
       {
         "video_name": "KETC | Living St. Louis | Shakespeare in the Park",
-        "pin": "Video",
+        "pin": "Health",
         "category": "Time1",
         "location": "Greater Ville",
         "latitude": 38.66672492931168, 
@@ -163,7 +163,7 @@
       },
       {
         "video_name": "Highlands Golf & Tennis Virtual Tour",
-        "pin": "Image",
+        "pin": "School",
         "category": "Time2",
         "location": "Greater Ville",
         "latitude": 38.661598019249375, 
@@ -173,7 +173,7 @@
       },
       {
         "video_name": "\"Everybody Say Yeah\" from Kinky Boots | The Muny",
-        "pin": "Video",
+        "pin": "Housing",
         "category": "Time3",
         "location": "Greater Ville",
         "latitude": 38.65901668546222, 
