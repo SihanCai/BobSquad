@@ -1,6 +1,6 @@
 /* adding variable for js access*/
 :root {
-    --mapHeight: 60%;
+    --mapHeight: 80%;
     --margin: 6%
 }
 
@@ -24,7 +24,7 @@ html, body {
 }
 
 .timeline {
-    margin-top: 50%;
+    margin-top: 45%;
     position: absolute;
     margin-left: 20%;
 }
