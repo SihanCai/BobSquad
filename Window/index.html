@@ -38,30 +38,23 @@
             </li>
         </ul>
     </div>
+    <a href="locationList.html">
+        <button type="button" class="btn btn-light" style="white-space: nowrap;">List of Locations</button>
+    </a>
 </nav>
 
-<!-- time period checkboxes -->
-<div style="width: 100%; height: 60px; text-align: left; margin-left: 7%">
-    <div class="mx-auto" style="width: 600px; display:inline-block; margin-top: 5px">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox1" value="time1" checked onchange="handleCheckBox(this)">
-            <label class="form-check-label font-xx-large" for="inlineCheckbox1">Time1</label>
-        </div>
-        <div class="form-check form-check-inline ">
-            <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox2" value="time2" checked onchange="handleCheckBox(this)">
-            <label class="form-check-label font-xx-large" for="inlineCheckbox2">Time2</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input big-checkbox" type="checkbox" id="inlineCheckbox3" value="time3" checked onchange="handleCheckBox(this)">
-            <label class="form-check-label font-xx-large" for="inlineCheckbox3">Time3</label>
-        </div>
-    </div>
-    <div class="nav justify-content-end location-list" style="display:inline-block">
-        <a href="locationList.html">
-            <button type="button" class="btn btn-light">List of Locations</button>
-        </a>
-    </div>
+<div style="width: 100%; height: 1%;""></div>
+<h2 style="text-align: center">Welcome to Bob Hansman’s virtual bus tour!</h2>
+
+<hr>
+<div style="width: 70%; margin: 0 auto;">
+    <h3 style="text-align: center">Due to the COVID-19 
+        pandemic Bob has not been able to conduct his informative tour about the lesser known history 
+        of St. Louis.  This website will allow you to take Bob’s informative tour virtually as you travel 
+        throughout the different historical sites on the interactive map.
+    </h3>
 </div>
+<hr>
 
 <!-- map -->
 <div id="map"></div>
@@ -125,13 +118,18 @@
       </section>
 </div>
 
+<!-- spacing -->
+<div style="width: 100%; height: 65%;""></div>
+
+  
+
 </body>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script async defer src="js/loadData.js"></script>
-<script async defer src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBqUZ5CKQvonTUoC9cyfvDFodhfwq8RP6E&callback=initMap"></script>
 <script src="js/map.js"></script>
+<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBqUZ5CKQvonTUoC9cyfvDFodhfwq8RP6E&callback=initMap"></script>
 <script src="js/index.js"></script>
 </html>

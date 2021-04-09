@@ -3,13 +3,9 @@ const videoIcon = "img/video_Icon_small.png";
 const imageIcon = "img/camera_Icon_small.png";
 const clusterImagePath = "img/";
 
-
-let time1Markers = [];  //Pre-1900s
-let time2Markers = [];  //1900-1930
-let time3Markers = [];  //1940-present
-let markers = [];
-
 let siteData={"data":[]};
+
+// map settings to turn off unecessary default markers
 let myStyles =[
     {
         featureType: "poi",
@@ -25,6 +21,8 @@ let myStyles =[
       ]
     }
 ];
+
+// Set different catagory icons for markers
 function setIcons() {
     siteData.data.forEach(element => {
         if (element.pin === "Image") {
@@ -70,6 +68,7 @@ function initMap() {
         //zoom: 11,
         styles: myStyles
     });
+    
     // Define the LatLng coordinates for the greaterVille polygon path.
     const greaterVilleCoords = [
         { lat: 38.67307, lng: -90.24424 },
@@ -150,32 +149,11 @@ function initMap() {
     });
     millCreekValleyArea.setMap(map);
 
+    // creating markers from json data
+    let markers = [];
     siteData.data.forEach(element => {
         let position = {lat: element.latitude, lng: element.longitude};
         let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title});
-
-        // // Open infowindow on mouse hover
-        // marker.addListener('mouseover', function() {
-        //     element.info_window.open(map, this);
-        // });
-        
-        // // Closing infowindow on mouse out
-        // marker.addListener('mouseout', function() {
-        //     element.info_window.close();
-        // });
-        // switch (element.category) {
-        //     case "Time1":
-        //         time1Markers.push(marker);
-        //         break;
-        //     case "Time2":
-        //         time2Markers.push(marker);
-        //         break;
-        //     case "Time3":
-        //         time3Markers.push(marker);
-        //         break;
-        //     default:
-        //         break;
-        // }
         google.maps.event.addListener(marker, 'click', (function (marker) {
             return function () {
                 window.location.href = "videoList.html?location=" + element.location;
@@ -183,61 +161,7 @@ function initMap() {
         })(marker));
         markers.push(marker);
     });
-    var mc = new MarkerClusterer(map, markers, {imagePath: `${clusterImagePath}/m`, averageCenter: true});
-    $('#refresh').click(function() {
-        refreshMap()
-    })
-    $('#clear').click(function() {
-            clearClusters()
-    })
-}
 
-
-function handleCheckBox(checkboxElem) {
-    if (checkboxElem.checked) {
-        setMapOnAll(map, checkboxElem.value);
-    } else {
-        deleteMarkers(checkboxElem.value);
-    }
-}
-
-// Sets the map on all markers in the array.
-function setMapOnAll(map, category) {
-    if (category === "time1") {
-        for (let i = 0; i < time1Markers.length; i++) {
-            time1Markers[i].setMap(map);
-        }
-    } else if (category === "time2") {
-        for (let i = 0; i < time2Markers.length; i++) {
-            time2Markers[i].setMap(map);
-        }
-    } else if (category === "time3") {
-        for (let i = 0; i < time3Markers.length; i++) {
-            time3Markers[i].setMap(map);
-        }
-    }
-}
-
-// Removes the markers from the map, but keeps them in the array.
-function clearMarkers(category) {
-    setMapOnAll(null, category);
-}
-
-// Deletes all markers in the array by removing references to them.
-function deleteMarkers(category) {
-    clearMarkers(category);
-}
-
-function refreshMap() {
-    if (markerClusterer) {
-            markerClusterer.clearMarkers();
-            // 				markerClusterer.addMarkers(markers,true)
-            markerClusterer.addMarkers(markers)
-    }
-}
-
-function clearClusters(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    markerClusterer.clearMarkers();
+    // set marker clustering
+    new MarkerClusterer(map, markers, {imagePath: `${clusterImagePath}/m`, averageCenter: true});
 }

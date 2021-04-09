@@ -1,7 +1,13 @@
 /* adding variable for js access*/
 :root {
-    --mapHeight: 500%;
+    --mapHeight: 60%;
     --margin: 6%
+}
+
+html, body { 
+    height: 100%;
+    width: 100%;
+    margin: 0; 
 }
 
 #map {
