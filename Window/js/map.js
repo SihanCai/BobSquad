@@ -101,7 +101,7 @@ function initMap() {
     let bottomGlobalCoord = project(bottomLatLng);
 
     map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 38.6844, lng: -90.28267},
+        center: {lat: 38.68801, lng: -90.40521},
         //values chosen by trial and error
         //zoom: 10 + 2.4*percentage/600,
         zoom: Math.floor(Math.log(heightPix*500/bottomGlobalCoord.x)/Math.log(2)),
@@ -284,5 +284,5 @@ function initMap() {
         div.innerHTML = '<img src="' + icon + '"> ' + '<span style="color: black;">' + name + '</span>';
         legend.appendChild(div);
     }
-    map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 }

@@ -35,6 +35,10 @@ html, body {
   vertical-align: middle;
 }
 
+.initial-hide {
+  display: none;
+}
+
 .map-wrapper {
     height: 100%;
 }
