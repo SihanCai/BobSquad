@@ -10,19 +10,16 @@ const clusterImagePath = "img/";
 let siteData={"data":[]};
 
 // map settings to turn off unecessary default markers
-let myStyles =[
-    {
-        featureType: "poi",
-        elementType: "labels",
-        stylers: [
-              { visibility: "off" }
-        ]
+let myStyles =[{
+    featureType: "poi",
+    elementType: "labels",
+    stylers: [
+        { visibility: "off" }]
     },
     {
-        featureType: "transit",
-        stylers: [
-            { visibility: "off" }
-      ]
+    featureType: "transit",
+    stylers: [
+        { visibility: "off" }]
     }
 ];
 
@@ -85,7 +82,25 @@ function project(latLng) {
       TILE_SIZE * (0.5 + latLng.lng() / 360),
       TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI))
     );
-  }
+}
+
+var addListenersOnPolygon = function(polygon, infowindow) {
+    google.maps.event.addListener(polygon, 'click', function (event) {
+        window.location.href = "videoList.html?location=" + polygon.get("location");
+    });
+    google.maps.event.addListener(polygon, "mouseover", function() {
+        this.setOptions({
+          fillOpacity: "0.5"
+        });
+        infowindow.open(map);
+    });
+    google.maps.event.addListener(polygon, "mouseout", function() {
+        this.setOptions({
+            fillOpacity: "0.25"
+        });
+        infowindow.close();
+    });
+}
 
 
 //Bottom y coord: 38.609298748555595, -90.27506700810305
@@ -194,8 +209,31 @@ function initMap() {
         strokeWeight: 2,
         fillColor: "#FF0000",
         fillOpacity: 0.25,
+        location: "Greater Ville",
     });
     greaterVilleArea.setMap(map);
+
+    // Hover and click for the Ville Polygon
+    const villeInfoContent =
+    '<div id="content" class="info-window" >' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The Ville</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>The Ville</b> is a historic African-American neighborhood located in " +
+    "<b>St. Louis, Missouri</b>. " +
+    "</p>" +
+    '<p>Attribution: The Ville, <a href="http://www.4theville.org/about-the-ville/">' +
+    "http://www.4theville.org/about-the-ville/</a> " +
+    "(last visited April 15, 2021).</p>" +
+    "</div>" +
+    "</div>";
+
+    var theVilleInfoWindow = new google.maps.InfoWindow({ maxWidth: 300 });
+    theVilleInfoWindow.setContent(villeInfoContent);
+    theVilleInfoWindow.setPosition({ lat: 38.66903, lng: -90.23826 });
+
+    addListenersOnPolygon(greaterVilleArea, theVilleInfoWindow);
 
     // Define the LatLng coordinates for the kinloch polygon path.
     const kinlochCoords = [
@@ -224,8 +262,31 @@ function initMap() {
         strokeWeight: 2,
         fillColor: "#0F9D58",
         fillOpacity: 0.25,
+        location: "Kinloch",
     });
     kinlochArea.setMap(map);
+
+    // Hover and click for Kinloch Polygon
+    const kinlochInfoContent =
+    '<div id="content" class="info-window" >' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Kinloch</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>Kinloch</b> is a historic African-American neighborhood located in " +
+    "<b>St. Louis, Missouri</b>. " +
+    "</p>" +
+    '<p>Attribution: Kinloch, <a href="https://en.wikipedia.org/wiki/Kinloch,_Missouri">' +
+    "https://en.wikipedia.org/wiki/Kinloch,_Missouri</a> " +
+    "(last visited April 15, 2021).</p>" +
+    "</div>" +
+    "</div>";
+
+    var kinlochInfoWindow = new google.maps.InfoWindow({ maxWidth: 300 });
+    kinlochInfoWindow.setContent(kinlochInfoContent);
+    kinlochInfoWindow.setPosition({ lat: 38.74466, lng: -90.32483 });
+    
+    addListenersOnPolygon(kinlochArea, kinlochInfoWindow);
 
     // Define the LatLng coordinates for the millCreekValley polygon path.
     const millCreekValleyCoords = [
@@ -258,14 +319,39 @@ function initMap() {
     });
     millCreekValleyArea.setMap(map);
 
+    // Hover and click for millCreekValley Polygon
+    const millCreekInfoContent =
+    '<div id="content" class="info-window" >' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">Mill Creek Valley</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>Mill Creek Valley</b> is a historic African-American neighborhood located in " +
+    "<b>St. Louis, Missouri</b>. " +
+    "</p>" +
+    '<p>Attribution: Mill Creek Valley, <a href="https://news.stlpublicradio.org/show/st-louis-on-the-air/2018-03-01/remembering-mill-creek-valley-once-home-to-20-000-black-st-louisans">' +
+    "https://news.stlpublicradio.org/show/mill-creek-valley</a> " +
+    "(last visited April 15, 2021).</p>" +
+    "</div>" +
+    "</div>";
+
+    var millCreekInfoWindow = new google.maps.InfoWindow({ maxWidth: 350 });
+    millCreekInfoWindow.setContent(millCreekInfoContent);
+    millCreekInfoWindow.setPosition({ lat: 38.63546, lng: -90.22904 }); 
+    
+    addListenersOnPolygon(millCreekValleyArea, millCreekInfoWindow);
+
     // creating markers from json data
     let markers = [];
     siteData.data.forEach(element => {
         let position = {lat: element.latitude, lng: element.longitude};
-        let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title});
+        let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title, id: element.video_id});
         google.maps.event.addListener(marker, 'click', (function (marker) {
+            // return function () {
+            //     window.location.href = "videoList.html?location=" + element.location;
+            // }
             return function () {
-                window.location.href = "videoList.html?location=" + element.location;
+                window.location.href="playvideo.html?id=" + marker.get("id");
             }
         })(marker));
         markers.push(marker);

@@ -35,6 +35,11 @@ html, body {
   vertical-align: middle;
 }
 
+.info-window {
+  color:black;
+}
+
+/* For map legend */
 .initial-hide {
   display: none;
 }

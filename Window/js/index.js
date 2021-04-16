@@ -8,5 +8,8 @@ window.onload = function() {
 
 // delay showing legend to allow it to move to the correct location
 function timeFunction() {
-    setTimeout(function(){ document.getElementById("legend").classList.remove('initial-hide') }, 400);
+    // Only remove class if page is index.html
+    if (location.href.split('/').pop() == "index.html") {
+        setTimeout(function(){ document.getElementById("legend").classList.remove('initial-hide') }, 400);
+    }
 }
