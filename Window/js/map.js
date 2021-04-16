@@ -229,7 +229,7 @@ function initMap() {
     "</div>" +
     "</div>";
 
-    var theVilleInfoWindow = new google.maps.InfoWindow({ maxWidth: 300 });
+    var theVilleInfoWindow = new google.maps.InfoWindow({ maxWidth: 300, disableAutoPan : true });
     theVilleInfoWindow.setContent(villeInfoContent);
     theVilleInfoWindow.setPosition({ lat: 38.66903, lng: -90.23826 });
 
@@ -282,7 +282,7 @@ function initMap() {
     "</div>" +
     "</div>";
 
-    var kinlochInfoWindow = new google.maps.InfoWindow({ maxWidth: 300 });
+    var kinlochInfoWindow = new google.maps.InfoWindow({ maxWidth: 300, disableAutoPan : true });
     kinlochInfoWindow.setContent(kinlochInfoContent);
     kinlochInfoWindow.setPosition({ lat: 38.74466, lng: -90.32483 });
     
@@ -316,6 +316,7 @@ function initMap() {
         strokeWeight: 2,
         fillColor: "#1A237E",
         fillOpacity: 0.25,
+        location: "Millcreek Valley",
     });
     millCreekValleyArea.setMap(map);
 
@@ -335,7 +336,7 @@ function initMap() {
     "</div>" +
     "</div>";
 
-    var millCreekInfoWindow = new google.maps.InfoWindow({ maxWidth: 350 });
+    var millCreekInfoWindow = new google.maps.InfoWindow({ maxWidth: 350, disableAutoPan : true });
     millCreekInfoWindow.setContent(millCreekInfoContent);
     millCreekInfoWindow.setPosition({ lat: 38.63546, lng: -90.22904 }); 
     
