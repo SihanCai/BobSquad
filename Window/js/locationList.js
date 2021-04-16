@@ -57,9 +57,9 @@
 function addLocation(){
     let allVideos = JSON.parse(sessionStorage.getItem("videos"));
     let all = document.getElementById("all");
-    let time1 = document.getElementById("time1");
-    let time2 = document.getElementById("time2");
-    let time3 = document.getElementById("time3");
+    let health = document.getElementById("health");
+    let Housing = document.getElementById("housing");
+    let Education = document.getElementById("education");
     let myset = new Set();
     for(let i = 0;i<allVideos.length;i++){
         //if(myset.has(allVideos[i].location)) continue;
@@ -67,14 +67,14 @@ function addLocation(){
             all.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
         myset.add(allVideos[i].location);
-        if("Time1" === allVideos[i].category){
-            time1.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        if("Housing" === allVideos[i].pin){
+            health.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
-        if("Time2" === allVideos[i].category){
-            time2.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        if("Health" === allVideos[i].pin){
+            Housing.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
-        if("Time3" === allVideos[i].category){
-            time3.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+        if("School" === allVideos[i].pin){
+            Education.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
     }
 }
