@@ -2,6 +2,21 @@
   "data": {
     "videos": [
       {
+        "video_name": "Pruitt-Igoe",
+        "format": "Text",
+        "pin": "Housing",
+        "category": "Time1",
+        "location": "Pruitt-Igoe",
+        "latitude": 38.64305492955095,
+        "longitude": -90.21005164877892,
+        "video_id": 19,
+        "link": "img/data/Pruitt-igoe.jpeg",
+        "link2": "img/data/Pruitt-igoe2.jpeg",
+        "link3": "img/data/Pruitt-igoe3.jpg",
+        "credits": "1) United States Geological Survey, 2) https://www.greyscape.com/modernism-was-framed-the-truth-about-pruitt-igoe/ 3) Google Maps",
+        "caption": "Once a hopeful low-income housing project, it is now an empty wasteland. For a 2 minute intorductory video, go to http://www.pruitt-igoe.com/"
+      },
+      {
         "video_name": "Lewis Place",
         "format": "Text",
         "pin": "Housing",
@@ -9,7 +24,7 @@
         "location": "Lewis Place",
         "latitude": 38.653593497934,
         "longitude": -90.25196763421111,
-        "video_id": 17,
+        "video_id": 18,
         "link": "",
         "credits": "",
         "caption": ""
@@ -22,9 +37,11 @@
         "location": "Visitation Park",
         "latitude": 38.65613308485759,
         "longitude": -90.27760138709728,
-        "video_id": 16,
-        "link": "",
-        "credits": "",
+        "video_id": 17,
+        "link": "img/data/visitation1.jpg",
+        "link2": "img/data/visitation2.jpeg",
+        "link3": "img/data/visitation3.jpg",
+        "credits": "1) https://womensvoicesraised.org/hansman_tour_photos/ 2) Mark Groth  3) https://racstl.org/event/ivory-perry-park-concert-series-4/",
         "caption": ""
       },
       {
@@ -63,7 +80,9 @@
         "longitude": -90.33990071371201,
         "video_id": 14,
         "link": "img/data/evans-howard.jpeg",
-        "credits": "Provided by Beth Miller",
+        "link2": "img/data/E-H_promenade.jpeg",
+        "link3": "img/data/E-H_plaque.jpeg",
+        "credits": "1) Beth Miller, 2) Mall Centers 3) tanya.roth",
         "caption": ""
       },
       {

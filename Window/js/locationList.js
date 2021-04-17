@@ -68,10 +68,10 @@ function addLocation(){
         }
         myset.add(allVideos[i].location);
         if("Housing" === allVideos[i].pin){
-            health.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+            Housing.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
         if("Health" === allVideos[i].pin){
-            Housing.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
+            health.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";
         }
         if("School" === allVideos[i].pin){
             Education.innerHTML += "<li><div class = \"shape\" onclick = 'jump1(\""+allVideos[i].location+"\")'>" + allVideos[i].location + "</div></li>";

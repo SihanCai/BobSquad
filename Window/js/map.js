@@ -116,13 +116,31 @@ function initMap() {
     let bottomGlobalCoord = project(bottomLatLng);
 
     map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 38.68801, lng: -90.40521},
+        center: {lat: 38.68801, lng: -90.29521},
         //values chosen by trial and error
         //zoom: 10 + 2.4*percentage/600,
         zoom: Math.floor(Math.log(heightPix*500/bottomGlobalCoord.x)/Math.log(2)),
         //zoom: 11,
         styles: myStyles
     });
+
+    // Define the LatLng coordinates for the Pruitt-Igoe polygon path.
+    const pruittIgoeCoords = [
+        { lat: 38.644940510933644, lng: -90.21267276882584 },
+        { lat: 38.64358020363595, lng: -90.2062665445006 },
+        { lat: 38.64131072259951, lng: -90.20703391188276 },
+        { lat: 38.64248251109998, lng: -90.21254343724458 },
+    ];
+    // Construct the greaterVille polygon.
+    const pruittIgoeArea = new google.maps.Polygon({
+        paths: pruittIgoeCoords,
+        strokeColor: "#EE9504",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#EE9504",
+        fillOpacity: 0.25,
+    });
+    pruittIgoeArea.setMap(map);
 
     // Define the LatLng coordinates for the Evans Howard Place polygon path.
     const evansHowardCoords = [

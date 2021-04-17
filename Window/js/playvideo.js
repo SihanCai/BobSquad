@@ -11,10 +11,16 @@ function displayVideo(id) {
         let element = dummyData.data[i];
         if (element.video_id == id) {
             document.getElementById("video_name").textContent = element.video_name;
-            document.getElementById("link").src=element.link.replace("?v=","/");
             document.getElementById("location").textContent = "Location: " + element.location;
             document.getElementById("credits").textContent = element.credits;
             document.getElementById("caption").textContent = element.caption;
+            document.getElementById("link").src=element.link.replace("?v=","/");
+            if (document.getElementById("link2") != null){
+                document.getElementById("link2").src=element.link2;
+            }
+            if (document.getElementById("link3") != null){
+                document.getElementById("link3").src=element.link3;
+            }
             displayOtherVideos(element.location, id);
             break;
         }
