@@ -51,16 +51,16 @@ h2{
   display:none;
 }
 #All:checked ~ .panels #All-panel,
-#Time1:checked ~ .panels #Time1-panel,
-#Time2:checked ~ .panels #Time2-panel,
-#Time3:checked ~ .panels #Time3-panel{
+#Health:checked ~ .panels #Health-panel,
+#Housing:checked ~ .panels #Housing-panel,
+#Education:checked ~ .panels #Education-panel{
   display:block
 }
 
 #All:checked ~ .tabs #All-tab,
-#Time1:checked ~ .tabs #Time1-tab,
-#Time2:checked ~ .tabs #Time2-tab,
-#Time3:checked ~ .tabs #Time3-tab{
+#Health:checked ~ .tabs #Health-tab,
+#Housing:checked ~ .tabs #Housing-tab,
+#Education:checked ~ .tabs #Education-tab{
   background:#fffffff6;
   color:#000;
   border-top: 3px solid #000;
