@@ -346,13 +346,16 @@ function initMap() {
     let markers = [];
     siteData.data.forEach(element => {
         let position = {lat: element.latitude, lng: element.longitude};
-        let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title, id: element.video_id});
+        let marker = new google.maps.Marker({position, map, icon: element.icon, title: element.title, id: element.video_id, format: element.format});
         google.maps.event.addListener(marker, 'click', (function (marker) {
             // return function () {
             //     window.location.href = "videoList.html?location=" + element.location;
             // }
             return function () {
-                window.location.href="playvideo.html?id=" + marker.get("id");
+                if (marker.format.localeCompare("Text") == 0)
+                    window.location.href="openImage.html?id=" + marker.get("id");
+                else
+                    window.location.href="playvideo.html?id=" + marker.get("id");
             }
         })(marker));
         markers.push(marker);
