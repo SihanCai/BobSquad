@@ -25,14 +25,14 @@ let myStyles =[{
 
 // icon object for legend
 const icons = {
-    video: {
-        name: "Videos",
-        icon: videoIcon,
-    },
-    image: {
-        name: "Images",
-        icon: imageIcon,
-    },
+    // video: {
+    //     name: "Videos",
+    //     icon: videoIcon,
+    // },
+    // image: {
+    //     name: "Images",
+    //     icon: imageIcon,
+    // },
     info: {
         name: "Info",
         icon: infoIcon,
