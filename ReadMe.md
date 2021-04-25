@@ -1,6 +1,6 @@
 # Bob's Bus Tour
 
-Bob's Bus Tour is a website where you can learn about the lesser known systemic discrimination towards the black populatin throughout St. Louis history. Please read before contributing to the website.
+Bob's Bus Tour is a website where you can learn about the lesser known systemic discrimination towards the black populatin throughout St. Louis history. **Please read before making contributions to this website.**
 
 ## Hosting
 
