@@ -3,7 +3,6 @@
 Bob's Bus Tour is a website where you can learn about the lesser known systemic discrimination towards the black populatin throughout St. Louis history. Please read before contributing to the website.
 
 ## Hosting
----
 
 Bob's bus tour is currently hosted on an AWS ubuntu 20.04.2 ec2 instance. We are using apache2 to serve the main page of our website. By default apache2 serves up "/var/www/html/index.html" as the homepage of the website. Currently we have this html page immediately redirect to the home page of the repository stored in "/var/www/html/BobSquad/"
 
@@ -22,7 +21,6 @@ To update the website after pushing changes to the repository:
     sudo systemctl restart apache2.service
     ```
 ## Running Locally
----
 
 Running the site locally for development purposes:
 
@@ -34,22 +32,15 @@ Running the site locally for development purposes:
 
 4. Right click on the "index.html" file and select "Open with Live Server".
 
-&nbsp;
-
 ## Adding to the Site
----
 
 ### Map Basics:
 
 For the map we are using google maps api. We are using a combination of polygons, markers, and infowindows to display the relavent information on map. For reference to the specific map elements and how they work 
 
-&nbsp;
-
 ### Adding Markers to Map:
 
 The marker locations for the map are all stored in the data.json file. Adding another element to the data.json file will automatically add it to the map and also create the page for viewing the video or photos associated with the location.
-
-&nbsp;
 
 ### Adding Highlighted Areas to the Map:
 
@@ -57,21 +48,15 @@ The highlighted areas of the map are polygons. Instructions for creating polygon
 https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
 There are also examples of the current polygons in the map.js file.
 
-&nbsp;
-
 ### Embedding YouTube Videos on the Website:
 
 The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website:  
 https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
 There are also examples of the current polygons in the map.js file.
 
-&nbsp;
-
 ### Finding Latitude and Longitude Coordinates:
 
 A simple way to find latitude and longitude coordinates is by creating a new map with Google My Maps and adding a marker in the location where you would like the marker to appear on the website. Clicking on the marker after it has been created in the My Maps map will display the latitude and longitude coordinates in the bottom left of the infowindow that appears.
-
-&nbsp;
 
 ### Adding Elements to the Timeline:
 Adding a timeline element requires adding an additional heading list element with the following syntax:
@@ -80,32 +65,21 @@ Adding a timeline element requires adding an additional heading list element wit
 
 It also requires adding one of the list elements that are contained within the main body of the file.
 
-&nbsp;
-
 ## Content for the Website
----
 
-Ultimately the main source of information for this map has come from Bob Hansman and he is probably going to be the easiest source of information for new content in the future. However, anything that is relavent and accurate information about the systemic discrimination towards black people throughout the history of St. Louis can definitely be added to this website. 
-
-&nbsp;
+Ultimately the main source of information for this map has come from Bob Hansman and he is probably going to be the easiest source of information for new content in the future. However, anything that is relavent and accurate information about the systemic discrimination towards black people throughout the history of St. Louis can definitely be added to this website.
 
 ### Photos:
 
 There are a lot of photos that have been collected by Bob Hansman over the years. Some of the photos have been uploaded to the google drive folder in the form of PowerPoints. However, currently most of the photos are completely unlabeled, so it is unclear where or when they were taken. Bob knows most of the background of the pictures, so it will be a process of sitting down with hime and going through the photos together to document the date, location, and significance of each of those photographs.
 
-&nbsp;
-
 ### Videos:
 
-At the moment all of our video content has come from the medical school documentary directed by Cory Brandt. In the future the source of videos could branch out to new footage of Bob's Tour or other informational videos. Another potential way of improving the current medschool footage would be to intermingle birds eye view drone footage or intermingle current and historical photos into Bob's storytelling. 
-
-&nbsp;
+At the moment all of our video content has come from the medical school documentary directed by Cory Brandt. In the future the source of videos could branch out to new footage of Bob's Tour or other informational videos. Another potential way of improving the current medschool footage would be to intermingle birds eye view drone footage or intermingle current and historical photos into Bob's storytelling.
 
 ### New Locations:
 
-There are so many events that have happened throughout St. Louis History and that are continuing to occur that we have not had nearly enough time to incorporate everything into the website. We hope that in the future more locations and more in-depth information can be added to the website to give a bigger picture of the systemic racism that has occurred and is continuing to occur throughout St. Louis history. 
-
-&nbsp;
+There are so many events that have happened throughout St. Louis History and that are continuing to occur that we have not had nearly enough time to incorporate everything into the website. We hope that in the future more locations and more in-depth information can be added to the website to give a bigger picture of the systemic racism that has occurred and is continuing to occur throughout St. Louis history.
 
 ### Links to Additional Information:
 
@@ -113,24 +87,16 @@ There are groups throughout St. Louis that are working to combat much of this sy
 
 There are also other sources of information that are adjacent to what is included in our website but go more into depth on a specific topic. It would be great to give links to other sources with helpful information.
 
-&nbsp;
-
 ## AWS/YouTube Login Info:
----
 
 The AWS account and the YouTube account both have the same login information:
 
 Email - BobsBusTour@gmail.com  
 Password - "Pruitt-Igoe1956"
 
-&nbsp;
-
 ## Contacts:
----
 
 Bob Hansman - hansman@wustl.edu
-
-&nbsp;
 
 ### Original Contributers:
 
@@ -139,8 +105,6 @@ Grant Gardner - g.e.gardner@wustl.edu
 Tom Sihan - sihantom@wustl.edu  
 Will Engelhardt - wengelhardt@wustl.edu  
 Ryan Feinfield - feinfir@wustl.edu
-
-&nbsp;
 
 ### Website Overseer:
 
