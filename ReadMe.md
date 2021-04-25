@@ -1,10 +1,10 @@
 # Bob's Bus Tour
 
-Bob's Bus Tour is a website where you can learn about the lesser known systemic discrimination towards the black populatin throughout St. Louis history. **Please read before making contributions to this website.**
+Bob's Bus Tour is a website where you can learn about the systemic discrimination towards the black populatin that has ocurred throughout St. Louis history. **Please read before making contributions to this website.**
 
 ## Hosting
 
-Bob's bus tour is currently hosted on an AWS ubuntu 20.04.2 ec2 instance. We are using apache2 to serve the main page of our website. By default apache2 serves up "/var/www/html/index.html" as the homepage of the website. Currently we have this html page immediately redirect to the home page of the repository stored in "/var/www/html/BobSquad/"
+Bob's bus tour is currently hosted on an AWS ec2 instance running Ubuntu 20.04.2. We are using apache2 to serve the main page of our website. By default apache2 serves up "/var/www/html/index.html" as the homepage of the website. Currently we have this html page immediately redirect to the home page of the repository stored in "/var/www/html/BobSquad/Window/index.html"
 
 To update the website after pushing changes to the repository:
 1. ssh into the ec2 instance by running the following command in the root directory of this repository:
@@ -13,7 +13,7 @@ To update the website after pushing changes to the repository:
     ssh -i "bobsquad.pem" ubuntu@ec2-18-191-145-124.us-east-2.compute.amazonaws.com
     ```
 
-2. Pull the most recent changes to the repository stored in "/var/www/html/BobSquad"
+2. Pull the most recent changes to the repository whose root directory is "/var/www/html/BobSquad"
 
 3. Restart the apache server by running the following command on the ec2 instance:
 
@@ -24,7 +24,7 @@ To update the website after pushing changes to the repository:
 
 Running the site locally for development purposes:
 
-1. Clone this repository to your computer.
+1. Clone this repository to your local computer.
 
 2. Open the Windows folder in "Visual Studio Code".
 
@@ -36,7 +36,7 @@ Running the site locally for development purposes:
 
 ### Map Basics:
 
-For the map we are using google maps api. We are using a combination of polygons, markers, and infowindows to display the relavent information on map. For reference to the specific map elements and how they work 
+For the map we are using google maps api. We are using a combination of polygons, markers, and infowindows to display the relavent information on map. For reference to the specific map elements and how they work visit: https://developers.google.com/maps/documentation/javascript/examples
 
 ### Adding Markers to Map:
 
@@ -44,19 +44,17 @@ The marker locations for the map are all stored in the data.json file. Adding an
 
 ### Adding Highlighted Areas to the Map:
 
-The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website:  
-https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
+The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website: https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
 There are also examples of the current polygons in the map.js file.
 
 ### Embedding YouTube Videos on the Website:
 
-The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website:  
-https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
+The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website: https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
 There are also examples of the current polygons in the map.js file.
 
 ### Finding Latitude and Longitude Coordinates:
 
-A simple way to find latitude and longitude coordinates is by creating a new map with Google My Maps and adding a marker in the location where you would like the marker to appear on the website. Clicking on the marker after it has been created in the My Maps map will display the latitude and longitude coordinates in the bottom left of the infowindow that appears.
+A simple way to find latitude and longitude coordinates is by creating a new map with Google My Maps and adding a marker in the location where you would like to know the latitude and longitude. Clicking on the marker after it has been created in the My Maps map will display the latitude and longitude coordinates in the bottom left of the infowindow that appears.
 
 ### Adding Elements to the Timeline:
 Adding a timeline element requires adding an additional heading list element with the following syntax:
@@ -71,11 +69,11 @@ Ultimately the main source of information for this map has come from Bob Hansman
 
 ### Photos:
 
-There are a lot of photos that have been collected by Bob Hansman over the years. Some of the photos have been uploaded to the google drive folder in the form of PowerPoints. However, currently most of the photos are completely unlabeled, so it is unclear where or when they were taken. Bob knows most of the background of the pictures, so it will be a process of sitting down with hime and going through the photos together to document the date, location, and significance of each of those photographs.
+There are a lot of photos that have been collected by Bob Hansman over the years. Some of the photos have been uploaded to the google drive folder in the form of PowerPoints. However, currently most of the photos are completely unlabeled, so it is unclear where or when they were taken. Bob knows most of the background of the pictures, so it will be a process of sitting down with him and going through the photos together to document the date, location, and significance of each of those photographs.
 
 ### Videos:
 
-At the moment all of our video content has come from the medical school documentary directed by Cory Brandt. In the future the source of videos could branch out to new footage of Bob's Tour or other informational videos. Another potential way of improving the current medschool footage would be to intermingle birds eye view drone footage or intermingle current and historical photos into Bob's storytelling.
+At the moment all of our video content has come from the medical school documentary directed by Cory Brandt. In the future the source of videos could branch out to new footage of Bob's Tour or other informational videos. Another potential way of improving the current medschool footage would be to intermingle birds eye view drone footage or intermingle more current and historical photos into Bob's storytelling.
 
 ### New Locations:
 
