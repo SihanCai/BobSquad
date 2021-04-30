@@ -63,7 +63,7 @@ Another way to find the latitude and longitude coodinates that lets you visualiz
 
 ### Infowindows on Hover:
 
-Currently the only InfoWindows that are implemented are shown when you hover the curser over a few select polygons on the map. There is a function in map.js called addListenersOnPolygon() taht will create the listeners for creating the infowindow when passed a polygon and infowindow as parameters. It is important to set the content for the infowindow and set the position using the latitude and longitued coordinates before calling addListenersOnPolygon(). There are several examples in the map.js file for reference.
+Currently the only InfoWindows that are implemented are shown when you hover the curser over a few select polygons on the map. There is a function in map.js called addListenersOnPolygon() that will create the listeners for creating the infowindow when passed a polygon and infowindow as parameters. It is important to set the content for the infowindow and set the position using the latitude and longitued coordinates before calling addListenersOnPolygon(). There are several examples in the map.js file for reference.
 
 If you want to add infowindows to markers, google maps api has in depth documentation on how to do so. https://developers.google.com/maps/documentation/javascript/infowindows
 
