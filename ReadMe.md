@@ -51,11 +51,19 @@ There are also examples of the current polygons in the map.js file.
 
 First the video will need to be uploaded to the YouTube account. Make sure that it is unlisted and can only be viewed through a link. If you are viewing the video that you would like to embed, copy the url and paste into the json file in the "link" propterty. Then replace "watch" with "embed" inside of the url.
 
+### Adding Photos to the Website:
+
+First the photo will need added to the img/data folder. Copy the filepath of the photo and paste it into the json file in the "link" propterty. Currently photos can only be listed in groups of 3.
+
 ### Finding Latitude and Longitude Coordinates:
 
 A simple way to find latitude and longitude coordinates is by opening google maps and right clicking in the location where you would like to know the coordinates. Clicking on the coordinates automatically copies it to the clipboard.
 
 Another way to find the latitude and longitude coodinates that lets you visualize them a little better is by creating a new map with Google My Maps and adding a marker in the location where you would like to know the latitude and longitude. Clicking on the marker after it has been created in the My Maps map will display the latitude and longitude coordinates in the bottom left of the infowindow that appears.
+
+### Infowindows on Hover:
+
+Currently the only InfoWindows that are implemented are shown when you hover the curser over a few select areas on the map. There is a function in map.js called addListenersOnPolygon() taht will create the listeners for creating the infowindow when passed a polygon and infowindow as parameters. It is important to set the content for the infowindow and set the position using the latitude and longitued coordinates before calling addListenersOnPolygon(). There are several examples in the map.js file for reference.
 
 ### Adding Elements to the Timeline:
 Adding a timeline element requires adding an additional heading list element with the following syntax:
