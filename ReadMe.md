@@ -1,6 +1,6 @@
 # Bob's Bus Tour
 
-Bob's Bus Tour is a website where you can learn about the systemic discrimination towards the black populatin that has ocurred throughout St. Louis history. **Please read before making contributions to this website.**
+Bob's Bus Tour is a website where you can learn about the systemic discrimination towards the black population that has ocurred throughout St. Louis history. **Please read before making contributions to this website.**
 
 ## Hosting
 
@@ -44,17 +44,18 @@ The marker locations for the map are all stored in the data.json file. Adding an
 
 ### Adding Highlighted Areas to the Map:
 
-The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website: https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
+The highlighted areas of the map are polygons. The code for the polygons is inside of the map.js file. Instructions for creating polygons are listed on google's developers website: https://developers.google.com/maps/documentation/javascript/examples/polygon-simple 
 There are also examples of the current polygons in the map.js file.
 
 ### Embedding YouTube Videos on the Website:
 
-The highlighted areas of the map are polygons. Instructions for creating polygons are listed on google's developers website: https://developers.google.com/maps/documentation/javascript/examples/polygon-simple  
-There are also examples of the current polygons in the map.js file.
+First the video will need to be uploaded to the YouTube account. Make sure that it is unlisted and can only be viewed through a link. If you are viewing the video that you would like to embed, copy the url and paste into the json file in the "link" propterty. Then replace "watch" with "embed" inside of the url.
 
 ### Finding Latitude and Longitude Coordinates:
 
-A simple way to find latitude and longitude coordinates is by creating a new map with Google My Maps and adding a marker in the location where you would like to know the latitude and longitude. Clicking on the marker after it has been created in the My Maps map will display the latitude and longitude coordinates in the bottom left of the infowindow that appears.
+A simple way to find latitude and longitude coordinates is by opening google maps and right clicking in the location where you would like to know the coordinates. Clicking on the coordinates automatically copies it to the clipboard.
+
+Another way to find the latitude and longitude coodinates that lets you visualize them a little better is by creating a new map with Google My Maps and adding a marker in the location where you would like to know the latitude and longitude. Clicking on the marker after it has been created in the My Maps map will display the latitude and longitude coordinates in the bottom left of the infowindow that appears.
 
 ### Adding Elements to the Timeline:
 Adding a timeline element requires adding an additional heading list element with the following syntax:
@@ -65,7 +66,7 @@ It also requires adding one of the list elements that are contained within the m
 
 ## Content for the Website
 
-Ultimately the main source of information for this map has come from Bob Hansman and he is probably going to be the easiest source of information for new content in the future. However, anything that is relavent and accurate information about the systemic discrimination towards black people throughout the history of St. Louis can definitely be added to this website.
+Ultimately the main source of information for this map has come from Bob Hansman and he is probably going to be the easiest source of information for new content in the future. However, anything that is relavent and accurate information about the systemic discrimination towards black people throughout the history of St. Louis can definitely be added to this website. It is also important that any photos, videos, and other content that is not from Bob Hansman is free from copyright and cited correctly.
 
 ### Photos:
 
@@ -84,13 +85,6 @@ There are so many events that have happened throughout St. Louis History and tha
 There are groups throughout St. Louis that are working to combat much of this systemic discrimination. Along with showing all of the unfortunate history of St. Louis we think it would be great to include links to groups where people can attempt to make a positive impact and attempt to stope the reoccuring patterns. 
 
 There are also other sources of information that are adjacent to what is included in our website but go more into depth on a specific topic. It would be great to give links to other sources with helpful information.
-
-## AWS/YouTube Login Info:
-
-The AWS account and the YouTube account both have the same login information:
-
-Email - BobsBusTour@gmail.com  
-Password - "Pruitt-Igoe1956"
 
 ## Contacts:
 
