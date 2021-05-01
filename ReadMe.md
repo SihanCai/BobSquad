@@ -7,7 +7,7 @@ Bob's Bus Tour is a website where you can learn about the systemic discriminatio
 Bob's bus tour is currently hosted on an AWS ec2 instance running Ubuntu 20.04.2. We are using apache2 to serve the main page of our website. By default apache2 serves up "/var/www/html/index.html" as the homepage of the website. Currently we have this html page immediately redirect to the home page of the repository stored in "/var/www/html/BobSquad/Window/index.html"
 
 To update the website after pushing changes to the repository:
-1. ssh into the ec2 instance by running the following command in the root directory of this repository:
+1. ssh into the ec2 instance by running the following command in the directory where you have stored the private key (if you need access to the private key reach out to Jeremiah Brannon):
 
     ```bash
     ssh -i "bobsquad.pem" ubuntu@ec2-18-191-145-124.us-east-2.compute.amazonaws.com
