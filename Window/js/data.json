@@ -138,7 +138,7 @@
         "caption": "This is the Shelley House, occupied by the J. D. and Ethel Shelley family."
       },
       {
-        "video_name": "Elias Sime and the Mother(board)s of Invention",
+        "video_name": "Housing in Kinloch (Coming Soon)",
         "format": "Video",
         "pin": "Housing",
         "category": "Time1",
@@ -146,12 +146,12 @@
         "latitude": 38.73124007169525, 
         "longitude": -90.32315955849795,
         "video_id": 10,
-        "link": "https://www.youtube.com/embed?v=csRH-w96UFo",
+        "link": "",
         "credits": "",
         "caption": ""
       },
       {
-        "video_name": "Elias Sime Crafts a New Narrative with Reclaimed Technology at SLAM",
+        "video_name": "Education in Kinloch (Coming Soon)",
         "format": "Video",
         "pin": "School",
         "category": "Time2",
@@ -159,12 +159,12 @@
         "latitude": 38.738069217200085, 
         "longitude": -90.32848106097286,
         "video_id": 9,
-        "link": "https://www.youtube.com/embed?v=EbBlyN3FPC0",
+        "link": "",
         "credits": "",
         "caption": ""
       },
       {
-        "video_name": "Kinky Boots at The Muny!",
+        "video_name": "Health in Kinloch (Coming Soon)",
         "format": "Video",
         "pin": "Health",
         "category": "Time3",
@@ -172,7 +172,7 @@
         "latitude": 38.73920734616699, 
         "longitude": -90.32204375491247,
         "video_id": 8,
-        "link": "https://www.youtube.com/embed?v=C3xDYLuz1iU",
+        "link": "",
         "credits": "",
         "caption": ""
       },
@@ -203,7 +203,7 @@
         "caption": ""
       },
       {
-        "video_name": "MIll Creek Valley Healthcare (1846-1874)",
+        "video_name": "Mill Creek Valley Healthcare (1846-1874)",
         "format": "Video",
         "pin": "Health",
         "category": "Time3",
@@ -216,7 +216,7 @@
         "caption": ""
       },
       {
-        "video_name": "MIll Creek Valley Introduction",
+        "video_name": "Mill Creek Valley Introduction",
         "format": "Video",
         "pin": "Info",
         "category": "Time3",
@@ -229,7 +229,7 @@
         "caption": ""
       },
       {
-        "video_name": "KETC | Living St. Louis | Shakespeare in the Park",
+        "video_name": "The Ville Healthcare (Coming Soon)",
         "format": "Video",
         "pin": "Health",
         "category": "Time1",
@@ -237,12 +237,12 @@
         "latitude": 38.66672492931168, 
         "longitude": -90.24165220430554,
         "video_id": 3,
-        "link": "https://www.youtube.com/embed?v=DMdGPVz4tkE",
+        "link": "",
         "credits": "",
         "caption": ""
       },
       {
-        "video_name": "Highlands Golf & Tennis Virtual Tour",
+        "video_name": "The Ville Education (Coming Soon)",
         "format": "Video",
         "pin": "School",
         "category": "Time2",
@@ -250,12 +250,12 @@
         "latitude": 38.661598019249375, 
         "longitude": -90.24637289176191,
         "video_id": 2,
-        "link": "https://www.youtube.com/embed?v=IOrdlZr1Bh0",
+        "link": "",
         "credits": "",
         "caption": ""
       },
       {
-        "video_name": "\"Everybody Say Yeah\" from Kinky Boots | The Muny",
+        "video_name": "The Ville Housing (Coming Soon)",
         "format": "Video",
         "pin": "Housing",
         "category": "Time3",
@@ -263,7 +263,7 @@
         "latitude": 38.65901668546222, 
         "longitude": -90.22800522914744,
         "video_id": 1,
-        "link": "https://www.youtube.com/embed?v=8bxbEdXYLws",
+        "link": "",
         "credits": "",
         "caption": ""
       }
